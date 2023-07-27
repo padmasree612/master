@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:method name="callChildMessage" action="{!c.callChild}">
+        <aura:attribute name="Number1" type="Decimal" />
+        <aura:attribute name="Number2" type="Decimal" />
+    </aura:method>
+</aura:component>

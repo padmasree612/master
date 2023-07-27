@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 trigger Demo_PE on Demo_PlatformEvent__e (after insert) {
     List<Id> accountIds = new List<Id>();
     List<Case> casestoUpdate = new List<Case>();
     for(Demo_PlatformEvent__e  pe : Trigger.New)
+=======
+trigger Demo_PE on Demo_Event__e(after insert) {
+    List<Id> accountIds = new List<Id>();
+    List<Case> casestoUpdate = new List<Case>();
+    for(Demo_Event__e   pe : Trigger.New)
+>>>>>>> 33cfbdb (initial commit)
     {
         accountIds.add(pe.Account_Id__c);
     }

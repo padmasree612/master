@@ -32,9 +32,13 @@
         <members>*</members>
         <name>StaticResource</name>
     </types>
+<<<<<<< HEAD
      <types>
         <members>*</members>
         <name>LightningMessageChannel</name>
     </types>
     <version>55.0</version>
+=======
+    <version>57.0</version>
+>>>>>>> 33cfbdb (initial commit)
 </Package>

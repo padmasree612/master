@@ -7,7 +7,11 @@ private class MixedDML {
               UserRole r = [SELECT Id FROM UserRole WHERE Name='COO'];
               
                User thisUser = [SELECT Id FROM User WHERE Id = :UserInfo.getUserId()];
+<<<<<<< HEAD
                System.runAs(thisUser){
+=======
+              System.runAs(thisUser){
+>>>>>>> 33cfbdb (initial commit)
               
               
               User u = new User(); 

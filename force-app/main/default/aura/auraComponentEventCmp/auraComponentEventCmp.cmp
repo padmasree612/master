@@ -1,0 +1,6 @@
+<aura:component>
+    <aura:attribute name="eventname" type="String" />
+    <aura:registerEvent name="cmpEvent" type="c:auraComponentEvent" /> 
+    <lightning:input label="Enter Name" value="{!v.eventname}"/>
+    <lightning:button variant="success" label="Child Button"  onclick="{!c.handleClick}"/>
+</aura:component>

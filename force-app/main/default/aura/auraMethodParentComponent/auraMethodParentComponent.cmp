@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="num1" type="Decimal" />
+    <aura:attribute name="num2" type="Decimal" />
+    <aura:attribute name="sumValue" type="Decimal" />
+    <lightning:input label="Enter Number1" value="{!v.num1}" />
+    <lightning:input label="Enter Number2"  value="{!v.num2}"/>    
+    <c:auraMethodChildComponent aura:id="childComp" />
+    <c:auraMethodChildComponentMul aura:id="childComp1" />  
+    <lightning:button variant="success" label="Add Numbers" title="Success" onclick="{!c.callChildMethod }"/>
+     <lightning:button variant="success" label="Mul Numbers" title="Success" onclick="{!c.callChildMethod1 }"/>
+    <p>{!v.sumValue}</p>
+</aura:component>

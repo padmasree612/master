@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="parentAttributeName" type="String" default="Parent Value" />
+    <p>Value of the Parent Atrribute : {!v.parentAttributeName}</p><br/><br/>
+    <c:ChildBoundAttributes childAtrributeName="{!v.parentAttributeName}" /><br/><br/>
+    <lightning:button variant="success" label="Change Parent Attribute" title="Success" onclick="{!c.ChangeParentAttribute }"/>
+</aura:component>

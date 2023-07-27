@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ApexTrigger xmlns="http://soap.sforce.com/2006/04/metadata">
+<<<<<<< HEAD
     <apiVersion>57.0</apiVersion>
+=======
+    <apiVersion>58.0</apiVersion>
+>>>>>>> 33cfbdb (initial commit)
     <status>Active</status>
 </ApexTrigger>

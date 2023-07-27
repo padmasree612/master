@@ -1,0 +1,9 @@
+<aura:component controller="insertAccountController" implements="flexipage:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="accounts" type="Account" default="{sObjectType:'Account'}" />
+    <lightning:input label="Account Name" value="{!v.accounts.Name}"/>
+    <lightning:input label="Phone" value="{!v.accounts.Phone}"/>
+    <lightning:input label="Email" value="{!v.accounts.Email__c}"/><br/><br/>
+    <lightning:button variant="success" label="Save" title="Success" onclick="{!c.insertAccountDetails}"/>
+    <c:displayAccountRecords />
+    
+</aura:component>

@@ -37,4 +37,13 @@ ehthumbs.db
 $RECYCLE.BIN/
 
 # Local environment variables
+<<<<<<< HEAD
 .env
+=======
+.env
+
+# Python Salesforce Functions
+**/__pycache__/
+**/.venv/
+**/venv/
+>>>>>>> 33cfbdb (initial commit)
