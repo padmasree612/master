@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title ='Insert Student Record'>
+    <div slot="title">
+    <h3>
+    <lightning-icon icon-name="standard:account" size="small"></lightning-icon> Create  Student
+    </h3>
+    </div>
+
+    <p class="slds-p-horizontal_small">
+    <lightning-input type="text" label="Student Name" value={getStudentRecord.Name} onchange={nameInpChange}></lightning-input>
+    </p>
+
+    <p class="slds-p-horizontal_small">
+        <lightning-input type="text" label="Student Roll Number" value={getStudentRecord.Student_Roll_Number__c} onchange={rollInpChange}></lightning-input>
+        </p>
+    
+            <p>
+            
+            <lightning-button label="Submit" value={recordId} onclick={createStudRec} variant="brand"></lightning-button>           
+            
+            <lightning-button label="Next" onclick={nextStudRec} variant="brand"></lightning-button>
+        
+        </p>  
+    </lightning-card>
+  
+   
+
+       
+ 
+
+    </template>

@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+    <aura:attribute name ="parentAttribute1" type="String" default="A" />
+    <aura:attribute name="parentAttribute2" type="String" default="B" />
+    <c:auraChildComponent aura:id="child" />    
+    <lightning:button variant="success" label="Call child Method" title="Success" onclick="{!c.onCallChildMethod }"/>
+</aura:component>

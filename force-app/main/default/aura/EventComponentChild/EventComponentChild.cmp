@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:registerEvent name="cmpEvent" type="c:EventComponent" />
+    <lightning:button variant="success" label="Child button" title="Child Button" onclick="{!c.handleClick}" />
+</aura:component>

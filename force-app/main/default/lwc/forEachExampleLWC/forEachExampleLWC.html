@@ -1,0 +1,10 @@
+<template>
+    <b>For:Each List</b>
+    <template for:each={contacts} for:item="con">
+        <div key = {con.Id}>
+        Id : {con.Id}, <br/>
+        Name : {con.Name}, <br/>
+        Phone : {con.Phone}   
+      </div>
+  </template>
+</template>

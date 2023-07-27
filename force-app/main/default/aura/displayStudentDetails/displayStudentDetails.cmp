@@ -1,0 +1,8 @@
+<aura:component controller="displayStudentDetailsController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="studentList" type="Admin_Pravalika_Student__c" />
+    <aura:attribute name="columns" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <p>
+    <lightning:datatable keyField="id" data="{!v.studentList}" columns="{!v.columns}"/>
+   </p>
+</aura:component>

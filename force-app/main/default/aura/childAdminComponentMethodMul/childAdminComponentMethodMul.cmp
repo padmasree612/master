@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	<aura:method name="callChildMessageMul" action="{!c.callChildmul}" >
+        <aura:attribute name="Numbers1" type="Decimal" />
+        <aura:attribute name="Numbers2" type="Decimal" />         
+    </aura:method> 
+</aura:component>

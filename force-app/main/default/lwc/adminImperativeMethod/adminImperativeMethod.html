@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Imperative Method"></lightning-card>
+    <p>
+        <lightning-button label="Load Students" onclick={handleStudentLoad}></lightning-button>
+    </p>
+    <p>
+        <template if:true={students}>
+            <lightning-datatable
+                key-field="id"
+                data={students}
+                columns={columns}>
+        </lightning-datatable>
+    </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </p>
+</template>

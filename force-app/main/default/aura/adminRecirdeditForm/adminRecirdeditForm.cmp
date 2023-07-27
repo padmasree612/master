@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Admin_Student__c">
+        <lightning:outputField fieldName="Name" />
+        <lightning:outputField fieldName="Student_Phone__c" />
+        <lightning:outputField fieldName="Student_Term_Fee__c" /> 
+    </lightning:recordViewForm>
+</aura:component>

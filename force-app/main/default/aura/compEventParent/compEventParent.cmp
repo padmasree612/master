@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:handler name="cmpEvent" event="c:compEvent" action="{!c.handleEvent}" />
+    <aura:attribute name="eventValue" type="String" />  
+    <h1>I am from Parent</h1><br/><br/>
+    <c:compEventChild /><br/><br/>
+    <h1>I am from Child</h1><br/><br/>
+    <div>{!v.eventValue}</div><br/><br/>
+</aura:component>

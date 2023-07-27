@@ -1,0 +1,4 @@
+<aura:component  implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<h1>This is my First Lightning Component</h1>
+    <P>I want to use this aura component in lighnting page</P>
+</aura:component>

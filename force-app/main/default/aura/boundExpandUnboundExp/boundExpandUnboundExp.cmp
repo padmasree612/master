@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="str" type="String" default="Welcome to Aura" /><br/><br/>
+    <lightning:input label="Enter a String" value="{!v.str}" /><br/><br/>
+    <h1>Display Bound Expression : {!v.str}</h1><br/><br/>
+    <h1>Display UnBound Expression : {#v.str}</h1><br/><br/>
+</aura:component>

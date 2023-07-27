@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Insert Relationship Records">
+        <p class="slds-p-horizontal_small">
+                <lightning-input type="text" label="LWC Relationship Name" value={getLWCRelationRecord.Name} onchange={handlenamechange}>
+                </lightning-input>          
+
+        </p>
+        <p class="slds-p-horizontal_small">
+            <lightning-input type="text" label="LWC Relationship Number" value={getLWCRelationRecord.LWC_Relationship_Number__c} onchange={handlenumberchange}>
+                
+            </lightning-input>
+
+    </p>
+    <p class="slds-p-horizontal_small">
+    <lightning-button variant="success" label="Success" title="Success" onclick={createRelRec} class="slds-m-left_x-small"></lightning-button>
+    <lightning-button variant="Next" label="Next" title="Next" onclick={nextRelRec} class="slds-m-left_x-small"></lightning-button>
+    </p>    
+</lightning-card>    
+</template>

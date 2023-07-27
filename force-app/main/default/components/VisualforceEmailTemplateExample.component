@@ -1,0 +1,17 @@
+<apex:component controller="VisualforceEmailTemplateController" access="global">
+    <!-- Get values from email template -->
+    <apex:attribute name="accountId" assignTo="{!emailAccountId}" description="This is the account Id passed from the email template." type="Id"/>
+    <apex:attribute name="accountName" description="This is the account Name passed from the email template." type="String" />
+
+
+        List of contacts at: {!accountName}
+
+
+    <!-- List of contacts on the account -->
+    <apex:repeat value="{!AccountContacts}" var="contact" id="theRepeat">
+        <!-- Print out each contact in a div -->
+        <div>
+            {!contact.Name}
+        </div>
+    </apex:repeat>
+</apex:component>

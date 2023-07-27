@@ -1,0 +1,15 @@
+<aura:component controller="DisplayoppRecords">
+    <aura:attribute name="oppStageName" type="List" />
+    <aura:attribute name="oppsList" type="List" />
+    <aura:attribute name="opp" type="Opportunity" default="{'sobjectType':'Opportunity',                                                        
+                                                       'StageName': ''}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="componentEvent" type="c:oppCompEvent" />
+	<lightning:select name="StageName" label="Select StageName:" aura:id="Industry" onchange="{!c.handleOnChange}" value="{!v.opp.StageName}">
+         <option value="">--None--</option>
+        <aura:iteration items="{!v.oppStageName}" var="option" >
+            
+            <option text="{!option}" value="{!option}"/>
+         </aura:iteration>                
+    </lightning:select>    
+</aura:component>

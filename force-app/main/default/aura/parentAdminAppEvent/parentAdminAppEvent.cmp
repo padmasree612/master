@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="eventMessage" type="string" />
+    <aura:handler event="c:AdminAppEvent" action="{!c.parentApplicationEvent}" />
+    <c:ChildAdminAppEvent />
+    <div>{!v.eventMessage}</div>
+</aura:component>

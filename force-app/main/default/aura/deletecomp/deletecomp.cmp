@@ -1,0 +1,25 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome" >
+    
+    <aura:attribute name="recordError" type="String"/>
+    <force:recordData aura:id="deleteAccount"
+                      recordId="{!v.recordId}"
+                      targetError="{!v.recordError}"
+                      fields="Id"
+                      />
+    
+   
+  
+    <!-- Contact form -->
+    <lightning:card iconName="action:new_contact" title="Delete Account">
+        <div class="slds-p-horizontal--small">
+            <lightning:button label="Delete Account" variant="brand" onclick="{!c.deleteAccount}"/>
+        </div>
+    </lightning:card>
+    <!-- Display errors if exists -->
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        
+            {!v.recordError}
+        
+    </aura:if>
+
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component controller="opportunityController">
+    <aura:attribute name="stagepick" type="List" />
+    <aura:attribute name="displayOppList" type="List" />
+    <aura:attribute name="opp" type="Opportunity" default="{'sobjectType':'Opportunity',                                                        
+                                                       'StageName': ''}"/>     
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+        <aura:registerEvent name="compEvent" type="c:opportunityCompEvent" />
+	 <lightning:select name="OpportunityStage" label="Opportunity StageName" value="{!v.opp.StageName}" aura:id="stagename" onchange="{!c.handleChange}">
+        <aura:iteration items="{!v.stagepick}" var="op">
+            <option text="{!op}" value="{!op}"  />
+        </aura:iteration>        
+    </lightning:select> 
+</aura:component>

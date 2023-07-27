@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForAllPageTypes">
+    <aura:attribute name="fields" type="String[]" default="['Name','Student_Phone__c','Student_Term_Fee__c']"/>
+		<lightning:notificationsLibrary aura:id="notifLib"/>
+ 		<lightning:card title="Record Form">
+			<lightning:recordForm recordId="{!v.recordId}" mode="view" objectApiName="Admin_Student__c" fields="{!v.fields}">
+            </lightning:recordForm>
+        </lightning:card>
+
+</aura:component>

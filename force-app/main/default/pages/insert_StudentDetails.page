@@ -1,0 +1,14 @@
+<apex:page controller="inserStudentController">
+<apex:form >
+        <apex:pageblock >
+            <apex:pageblocksection >
+                <apex:inputField value="{!std.Name}"/>
+                <apex:inputField value="{!std.Demo_College__c}"/>
+            </apex:pageblocksection>
+            <apex:pageblockbuttons >
+                <apex:commandButton action="{!SaveRecord}" value="Save" />
+            </apex:pageblockbuttons>            
+        </apex:pageblock>
+    </apex:form>
+ 
+</apex:page>

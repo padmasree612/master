@@ -1,0 +1,33 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="myName" type="String" default="my name is Padma" />
+    <aura:attribute name="myAge" type="Integer" default="25" />
+    <aura:attribute name="Graduated" type="boolean" default="true" />
+    <aura:attribute name="Color" type="String[]" default="['red','green','blue']" />
+    <aura:attribute name="colorList" type="List" default="['purple','orange','pink']" />
+    <p>
+        Name : {!v.myName}<br/>
+        Age :{!v.myAge}<br/>
+        Graduated : {!v.Graduated}<br/>
+        Color : {!v.Color[0]}<br/>
+        collorList :{!v.colorList[1]}<br/>
+    </p> <br/>
+    
+
+    <aura:if isTrue="{!v.Graduated}">
+		I am Graduated
+    <aura:set attribute="else">
+      I am not Graduated.
+    </aura:set>
+   </aura:if> <br/><br/>
+    
+    <aura:iteration items="{!v.Color}" var="item">
+  	<div>{!item}</div>
+    </aura:iteration> <br/><br/>
+    
+   <aura:iteration items="{!v.colorList}" var="item">
+  	<div>{!item}</div>
+    </aura:iteration> <br/><br/>
+    
+     <lightning:input  label="Enter myAge" aura:id='testInput' />
+     <lightning:button variant="success" label="Success" title="Success" onclick="{!c.handleClick}"/>
+</aura:component>

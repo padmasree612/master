@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" controller ="insertPatientRecords" access="global" >
+    <aura:attribute name='patient' type='Patient__c' default="{sobjecttype:'Patient__c'}"/>
+     <lightning:input  label="Patient Name" value='{!v.patient.Name}' />
+     <lightning:input  label="Term Fee" value='{!v.patient.Term1_Fee__c}'/>
+     <lightning:input  label="Patient Branch" value='{!v.patient.Patient_Branch__c}'/>
+    <lightning:button variant="success" label="Success" title="Success" onclick="{!c.insertPatientRecords }"/>
+	
+</aura:component>

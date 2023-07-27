@@ -1,0 +1,15 @@
+<template>
+    <p>
+        <lightning-button label="Load Students" onclick={handleLoad}></lightning-button>
+    </p>
+    <template if:true={students}>      
+            <lightning-datatable
+                    key-field="id"
+                    data={students}
+                    columns={columns}>
+            </lightning-datatable>   
+    </template>
+    <template if:true={error}>
+        {error}
+    </template>
+</template>

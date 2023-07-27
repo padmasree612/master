@@ -1,0 +1,24 @@
+<aura:component >
+    <aura:attribute name="dispOpp" type="List" />      
+    <aura:handler name="componentEvent" event="c:oppCompEvent" action="{!c.handleEvent}" />
+    <c:oppChildCompEvent />
+     <div class="slds"> 
+
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate">Opportunity Name</span></th>
+                <th scope="col"><span class="slds-truncate">Opportunity StageName</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.dispOpp}" var="opp">
+                <tr>
+                    <td>{!opp.Name}</td>
+                    <td>{!opp.StageName}</td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+        </div>
+</aura:component>

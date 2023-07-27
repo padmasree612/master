@@ -1,0 +1,6 @@
+<aura:component controller="contactcontroller" implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="contactsList" type="List" />  
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>    
+    <lightning:button variant="brand" label="Display Contacts" onclick="{!c.callChildMethod }"/><br/><br/>
+     <c:childAdminComponentMethod aura:id="childCmp" />  
+</aura:component>

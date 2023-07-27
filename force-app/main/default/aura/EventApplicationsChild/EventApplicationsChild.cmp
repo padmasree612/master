@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:registerEvent name="EventApplication" type="c:EventApplication" />
+    <lightning:button label ="Click the button" variant ="brand" onclick="{!c.handleClick}" />
+</aura:component>

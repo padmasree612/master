@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<div>
+        <h1>This is lightning component for visualforce pages</h1>
+    </div>
+</aura:component>

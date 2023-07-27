@@ -1,0 +1,10 @@
+<apex:page Controller="ContactController_VF" >
+<apex:pageBlock >
+<apex:form >
+    First Name : <apex:inputText value="{!contact.FirstName}" />    
+    Last Name : <apex:inputText value="{!contact.LastName}" />
+    Email : <apex:inputText value="{!contact.Email}" />
+    <apex:commandButton value="Save" action="{!save}"/>
+   </apex:form> 
+</apex:pageBlock>   
+</apex:page>

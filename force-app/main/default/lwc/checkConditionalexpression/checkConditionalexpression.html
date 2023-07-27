@@ -1,0 +1,6 @@
+<template>
+    <lightning-input type="checkbox" label="Show Details" onchange={handleChange}></lightning-input>
+    <template if:true={isVisible}>
+        These are Details when isVisble is True!
+    </template>
+</template>

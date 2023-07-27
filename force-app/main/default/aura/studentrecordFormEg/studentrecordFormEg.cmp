@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name ="fields" type="String[]" default ="['Name','Student_Number__c','Marks1__c','Demo_College__c']"/>    
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <lightning:recordForm objectApiName="Demo_Student__c"  fields="{!v.fields}" onsuccess="{!c.handleSubmit}">
+    </lightning:recordForm>
+</aura:component>

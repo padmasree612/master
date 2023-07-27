@@ -1,0 +1,3 @@
+<aura:component implements="force:appHostable" access="global" >
+	<h1> Use This Component in the Tab</h1>	
+</aura:component>

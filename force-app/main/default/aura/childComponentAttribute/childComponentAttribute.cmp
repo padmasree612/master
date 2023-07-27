@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="firstName" type="String" default="Hello"/>
+    <aura:attribute name="lastName" type="String" default="World" />       
+    <h1>Display Names : {!v.firstName} {!v.lastName}</h1>
+</aura:component>

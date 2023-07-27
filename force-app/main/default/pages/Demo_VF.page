@@ -1,0 +1,28 @@
+<apex:page standardController="Account">
+    <apex:pageBlock title="Account Summary">
+    <apex:pageBlockSection title="Account Information" columns="2" >
+     <apex:dataTable value="{!Account}" var="acc">   
+     
+     <apex:column >
+            <apex:facet name="header">Name</apex:facet>           
+            <apex:outputText value="{!acc.Name }"/>
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">Phone</apex:facet>           
+            <apex:outputText value="{!acc.Phone}"/>
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header">Industry</apex:facet>            
+            <apex:outputText value="{!acc.Industry}"/>
+        </apex:column>  
+          <apex:column >
+            <apex:facet name="header">AnnualRevenue </apex:facet>           
+            <apex:outputText value="{!acc.AnnualRevenue }"/>
+        </apex:column>  
+           
+           
+      </apex:dataTable>   
+    </apex:pageBlockSection>
+       
+    </apex:pageBlock>
+</apex:page>

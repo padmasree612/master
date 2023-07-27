@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" > 
+<aura:attribute name="contactsDisplay" type="List" />    
+    <aura:method name="callChildMessage" action="{!c.callChild}" >
+        <aura:attribute name="contactList" type="List" />               
+    </aura:method> 
+     <div class="slds"> 
+
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate">Contact Name</span></th>
+                <th scope="col"><span class="slds-truncate">Contact Phone</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.contactsDisplay}" var="contact">
+                <tr>
+                    <td>{!contact.Name}</td>
+                    <td>{!contact.Phone}</td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+        </div>  
+</aura:component>

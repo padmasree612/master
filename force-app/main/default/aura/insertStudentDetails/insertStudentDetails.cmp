@@ -1,0 +1,8 @@
+<aura:component controller="insertStudentRecords">
+    <aura:attribute name="student" type="Admin_Pravalika_Student__c" default="{sObjectType:'Admin_Pravalika_Student__c'}"/>
+    <lightning:input label="Student Name" type="String" value="{!v.student.Name}"/>
+    <lightning:input label="Student Term Fee" type="String" value="{!v.student.Student_Term_Fee1__c}"/>
+    <lightning:input label="Student Branch" type="String" value="{!v.student.Student_Branch__c}"/>
+    <lightning:button variant="Success" label="Success" title="Success" onclick="{!c.insertStudentRecord}"/>
+	
+</aura:component>

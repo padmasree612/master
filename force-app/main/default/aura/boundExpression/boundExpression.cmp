@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="myStr" type="String" default="Welcome to Aura Components" />  
+    <lightning:input label="Enter a String" value="{!v.myStr}" />
+   <h1>Bound Expression :  {!v.myStr}</h1><br/><br/>
+   <h1>Un Bound Expression : {#v.myStr}</h1><br/><br/> 
+    
+
+</aura:component>

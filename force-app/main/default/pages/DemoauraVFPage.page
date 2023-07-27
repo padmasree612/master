@@ -1,0 +1,16 @@
+<apex:page >
+      <apex:includeLightning />
+      <div id="LightningComponentId" />
+      <script>
+          $Lightning.use("c:DemoAuraVFApp",function()
+          {
+                 $Lightning.createComponent("c:DemoAuraVF",
+                 {
+                 },
+                     LightningComponentId,function(cmp)
+                     {
+                         console.log("Display Lightning Component in Visualforce page");
+                     });
+          });
+      </script>
+</apex:page>

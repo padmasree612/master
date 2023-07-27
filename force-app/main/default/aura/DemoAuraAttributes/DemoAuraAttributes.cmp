@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name ="myName" type="String" default="my name is padma" access ="public" />
+    <aura:attribute name ="myAge" type="Integer" default="25" access ="public" />
+    <aura:attribute name ="Graduated" type="Boolean" default="false" access ="public" />
+    <aura:attribute name ="Color" type="String[]" default="['red','green','blue']" access ="public" />
+    <aura:attribute name="ColorList" type="List" default="['red','green','blue']" access ="public" />
+     <lightning:layout >
+            <lightning:layoutItem padding="around-small">
+                    Name : {!v.myName}<br/>
+                    Age : {!v.myAge}<br/>
+                    Graduated : {!v.Graduated}<br/>
+                    Color : {!v.Color[0]}<br/>
+                    ColorList : {!v.ColorList[1]}<br/>  
+                <aura:if isTrue="{!v.Graduated}">
+    				True
+                    <aura:set attribute="else">
+                        False
+                    </aura:set>
+                </aura:if> <br/>
+                
+                <aura:iteration items="1,2,3,4,5" var="item">
+                 <p>{!item}</p>
+                </aura:iteration>
+                
+                <lightning:input aura:id="testInput" label="Enter my Age" />                 
+    			<lightning:button variant="success" label="Success" title="Success" onclick="{!c.handleClick }"/>
+             </lightning:layoutItem> 
+    </lightning:layout>
+</aura:component>

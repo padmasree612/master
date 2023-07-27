@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="Demo" type="String" default="Welcome to Aura" access="public" />
+    <aura:attribute name="Age" type="Integer" default="23" access="public" />
+    <aura:attribute name="truthy" type="boolean" default="false" access="public" />
+    <aura:attribute name="Colour" type="String[]" default="['red','blue','green']" access="public" />
+    <aura:attribute name="ColourList" type="List" default="['red','blue','green']" access="public" />
+    <aura:attribute name="ColourSet" type="Set" default="['orange','navy','white']" access="public" />
+    <aura:attribute name="contactObject" type="Contact"  access="public" />
+    Welcome :{!v.Demo} Age :{!v.Age} Colour Display:{!v.Colour[1]} Colour List: {!v.ColourList[2]}
+    
+    <aura:if isTrue="{!v.truthy}">
+    True
+    <aura:set attribute="else">
+      False
+    </aura:set>
+  </aura:if> 
+    
+    <aura:iteration items="1,2,3,4,5" var="item">
+        <meter value="{!item / 5}"/><br/>
+    </aura:iteration>
+
+    
+    <lightning:input aura:id="testInput" label="Please Enter Age" />
+    
+    <lightning:button variant="success" label="Success" title="Brand action" onclick="{!c.handleClick}" />
+    <lightning:button title="Check" label="Component Methods" onclick="{!c.doClick}" />
+</aura:component>

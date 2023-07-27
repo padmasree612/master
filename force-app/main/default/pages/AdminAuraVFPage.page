@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:includeLightning />
+    <div id="LightningComponentId" />
+      <script>
+        $Lightning.use("c:AdminAuraVFApp",function()                        
+        {
+                        $Lightning.createComponent("c:AdminAuraVF",
+                        {
+                        },
+                                "LightningComponentId",function(cmp)
+                        {
+                               console.log("Display lightning component in vf Page");   
+                        });
+        });
+    </script>    
+</apex:page>

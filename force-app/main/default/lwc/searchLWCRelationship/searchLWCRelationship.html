@@ -1,0 +1,23 @@
+<template>
+    <lightning-card  variant="Narrow"  title="LWCRelationship Search Form" icon-name="standard:account">
+        <lightning-layout>
+        <lightning-layout-item size="4" padding="around-small" >
+            <lightning-input   value={searchKey} label="Relationship Name" onchange={handleSearchKey}></lightning-input>
+         </lightning-layout-item>          
+         <lightning-layout-item>
+            <template if:true={crmPicklistValues.data}>               
+                <lightning-combobox label="CRM Role"  value={value} options={crmPicklistValues.data.values} onchange={handleCrmChange}></lightning-combobox>
+                </template>
+            </lightning-layout-item> 
+                 
+        </lightning-layout>        
+    <lightning-button variant="brand" label="Search Relationsips" title="Search Relationsips" onclick={searchRelRec} class="slds-m-left_x-small"></lightning-button>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-datatable key-field="id" data={relationships} columns={cols}>
+
+            </lightning-datatable>
+        </lightning-layout-item>
+    </lightning-layout>
+</lightning-card>
+</template>

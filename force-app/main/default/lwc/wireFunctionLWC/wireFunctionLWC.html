@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Wire Function">
+        <template if:true={accounts}>
+            <template for:each={accounts} for:item="acc" >
+                <p key = {acc.Id}>{acc.Name} &nbsp;&nbsp;
+                    {acc.Phone}
+                </p>
+            </template>
+            <template if:true={error}>
+                {error}
+            </template>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<template>
+    <template iterator:it={contacts}>
+            <div key={it.value.Id}>
+                <div if:true={it.first}  class="changefirst">
+                    This is first
+                </div>
+                Id : {it.value.Id},<br/>
+                Name : {it.value.Name},<br/>
+                Phone : {it.value.Phone}
+
+                <div if:true={it.last} class="changeLast">
+                    This is last
+                </div>
+
+
+            </div>
+
+    </template>
+</template>

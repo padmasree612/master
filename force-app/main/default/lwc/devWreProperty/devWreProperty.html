@@ -1,0 +1,11 @@
+<template>
+   <lightning-card title="Wire Property Example"></lightning-card>
+    <template if:true={students.data}>
+        <template for:each={students.data} for:item="std">
+            <p key={std.Id}>{std.Name}  {std.Student_Branch__c}</p>
+        </template>
+    </template>
+    <template if:true={students.error}>
+        {students.error}
+    </template>
+</template>

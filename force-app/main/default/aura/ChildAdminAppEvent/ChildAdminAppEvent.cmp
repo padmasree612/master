@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="appres" type="String" />
+    <aura:registerEvent name="appEvent" type="c:AdminAppEvent" />
+    <lightning:input label="Enter App Name" value="{!v.appres}" />    
+    <lightning:button label="Click to fire App Event" onclick="{!c.callChildMethod}" />    
+</aura:component>

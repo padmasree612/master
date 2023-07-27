@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	 <aura:attribute name="recordId" type="String" />
+    <lightning:recordViewForm recordId="{!v.recordId}" 
+                              objectApiName="Contact">
+    <div class="slds-grid">
+        <div class="slds-col slds-size_2-of-3">
+            <lightning:outputField fieldName="Name" />
+            <lightning:outputField fieldName="Phone" />
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+            <lightning:outputField fieldName="LeadSource" />
+            <lightning:outputField fieldName="Email" />
+        </div>
+    </div>
+</lightning:recordViewForm>
+</aura:component>

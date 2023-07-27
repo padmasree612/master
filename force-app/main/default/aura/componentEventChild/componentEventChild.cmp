@@ -1,0 +1,7 @@
+<aura:component controller="contactcontroller" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <!--register Event-->   
+    <aura:attribute name="conList" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="cmpEvent" type="c:componentEvent" />    
+    <lightning:button variant="success" label="Display Contacts" onclick="{!c.handleClick}"/>
+</aura:component>

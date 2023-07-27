@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+	<h1>{!$Label.c.Aura_Demo}</h1>
+</aura:component>

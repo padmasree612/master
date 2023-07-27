@@ -1,0 +1,9 @@
+<aura:component controller="insertAdminStucentController" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="students" type="Admin_Student__c" default="{sObjectType:'Admin_Student__c'}" />
+    <lightning:input label="Student Name" value="{!v.students.Name}" />
+    <lightning:input label="Student Email" value="{!v.students.Student_Email__c}" />
+    <lightning:input label="Student Phone" value="{!v.students.Student_Phone__c}" />
+    <lightning:input label="Student Term Fee" value="{!v.students.Student_Term_Fee__c}" />
+    <lightning:button variant="Success" label="Success" title="Success" onclick="{!c.insertStudentDetails}" />
+    
+</aura:component>

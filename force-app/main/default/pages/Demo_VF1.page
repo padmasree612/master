@@ -1,0 +1,13 @@
+<apex:page StandardController="Account" renderAs="pdf" recordSetVar="acc">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:selectList value="{!filterId}" size="1">
+                <apex:selectOptions value="{!listviewOptions}"></apex:selectOptions>
+             </apex:selectList> 
+             <apex:commandButton action="{!list}" value="Go"/>
+                 <apex:pageBlockTable title="Account" value="{!acc}" var="ac">
+                     <apex:column value="{!ac.Name}" />
+                 </apex:pageBlockTable>   
+        </apex:pageBlock>
+    </apex:form>   
+</apex:page>

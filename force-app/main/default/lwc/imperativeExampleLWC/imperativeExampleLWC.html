@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Imperative Method">
+        <p>
+            <lightning-button label="Load Contacts" onclick={handleLoad}></lightning-button>
+        </p>
+        <template if:true={contacts}>
+            <template for:each={contacts} for:item="con">
+                <p key={con.Id}>{con.Name}</p>
+            </template>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+</template>

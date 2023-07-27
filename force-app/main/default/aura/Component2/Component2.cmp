@@ -1,0 +1,8 @@
+<aura:component>
+    <aura:attribute name="eventMessage" type="String"/> 
+    <aura:handler event="c:SampleApplicationEvent" action="{!c.component2Event}"/>
+    <c:Component1 />
+    <div class="slds-m-around_xx-large">
+        <p>{!v.eventMessage}</p> 
+    </div>
+</aura:component>

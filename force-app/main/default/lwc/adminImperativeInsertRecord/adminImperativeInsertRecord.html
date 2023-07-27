@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Insert Student Record"></lightning-card>
+    <p>
+        <lightning-input type="text" label="Student Name" value={getStudentRecord.Name} onchange={nameChange}></lightning-input>
+        <lightning-input type="text" label="Student Phone" value={getStudentRecord.Student_Phone__c} onchange={phoneChange}></lightning-input>
+        <lightning-input type="text" label="Student Marks" value={getStudentRecord.Student_Term_Fee__c} onchange={marksChange}></lightning-input>
+    </p>
+    <p>
+        <lightning-button label="Submit" onclick={createStudentRec}></lightning-button>
+    </p>
+</template>

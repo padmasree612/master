@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  variant="Narrow"  title="LWCRelationship Create Form" icon-name="standard:account">
+        <lightning-layout>
+            <lightning-layout-item size="4" padding="around-small" >
+               <lightning-input  value={recRelationShip.Name} label="Relationship Name" onchange={handleNameChange}></lightning-input>
+              
+                
+                
+                <template if:true={SegmentPicklistValues.data}>               
+               
+                    <lightning-combobox label="Effective Segment"  value={SegmentPicklistValues.Effective_Segment__c} options={SegmentPicklistValues.data.values} onchange={handleSegmentChange}></lightning-combobox>
+              
+                </template>
+            
+                <lightning-record-edit-form object-api-name="LWC_Relationship__c" id="createContactForm" >
+                    <lightning-input-field label ='Originator 1' field-name="Originator_1__c" variant="label-hidden" onchange={handleOriginatorSelection}> </lightning-input-field>
+                </lightning-record-edit-form>
+                </lightning-layout-item> 
+        </lightning-layout>
+        <lightning-button variant="brand" label="Save Relationsips" title="Save Relationsips" onclick={createRec} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>

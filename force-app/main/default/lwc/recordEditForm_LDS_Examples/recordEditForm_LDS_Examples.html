@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Record Edit Form">
+            <lightning-record-edit-form record-id={recordId} object-api-name="Case" onsuccess={handleSuccess} onsubmit={handleSubmit}>
+                <lightning-input-field field-name="Origin"></lightning-input-field>
+                <lightning-input-field field-name="Status"></lightning-input-field>
+                <lightning-input-field field-name="SuppliedEmail"></lightning-input-field>
+                <lightning-button variant="brand" type="submit" name="update" label="Update"></lightning-button>
+            </lightning-record-edit-form>
+    </lightning-card>
+</template>

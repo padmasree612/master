@@ -1,0 +1,6 @@
+<aura:component>
+    <aura:method name="myMethod" action="{!c.executeMyMethod}">
+        <aura:attribute name="param1" type="String"/>
+        <aura:attribute name="param2" type="String"/>
+    </aura:method>
+</aura:component>

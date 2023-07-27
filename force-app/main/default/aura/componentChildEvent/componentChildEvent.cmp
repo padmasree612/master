@@ -1,0 +1,6 @@
+<aura:component controller="contactcontroller">
+    <aura:attribute name="conlist" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="compEvent" type="c:compChildEvent"/>
+    <lightning:button variant="sucess" label="Display Contact" onclick="{!c.disconlist}" /><br/><br/>
+</aura:component>

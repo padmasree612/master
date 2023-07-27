@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="sumValue" type="Decimal" />
+    <aura:attribute name="numb1" type="Decimal"/>
+    <aura:attribute name="numb2" type="Decimal" />
+    
+    <lightning:input type="Number" label="Enter a Number1" value="{!v.numb1}"/>
+    <lightning:input type="Number" label="Enter a Number2" value="{!v.numb2}"/>
+    <c:childComponentMethod aura:id="childCmp"/>
+ <lightning:button variant="brand" label="Add"  onclick="{!c.sumNumbers}"/>
+    <p>{!v.sumValue}</p>
+</aura:component>

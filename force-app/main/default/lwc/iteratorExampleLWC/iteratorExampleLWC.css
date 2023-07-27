@@ -1,0 +1,10 @@
+.changefirst{
+    font-weight: bold;
+    font-size: 15px;
+    font-display: blue;
+}
+.changeLast{
+    font-weight: bold;
+    font-size: 15px;
+    font-style: red;
+}

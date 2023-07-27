@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:handler name="cmpEvent" event="c:EventComponent" action="{!c.handleEvent}" />
+    <aura:attribute name="eventValue" type="String" />
+    <h1>Display from Parent</h1>
+    <c:EventComponentChild />
+    <h1>Display from Child</h1>
+    <div>{!v.eventValue}</div>
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:handler event="c:EventApplication" action="{!c.handleEvent}" />
+    <aura:attribute name="textMessage" type="String" />
+    <c:EventApplicationsChild />
+    <p>{!v.textMessage}</p>
+</aura:component>

@@ -1,0 +1,42 @@
+<template>
+    <lightning-card  variant="Narrow"  title="LWCRelationship Create Form" icon-name="standard:account">
+        <lightning-layout>
+            <lightning-layout-item size="4" padding="around-small" >
+                <lightning-input  value={recRelationShip.Name} label="Relationship Name"></lightning-input>
+                <template if:true={SegmentPicklistValues.data}>
+                <lightning-combobox label="Effective Segment"  value={value} options={SegmentPicklistValues.data.values} onchange={handleChange}></lightning-combobox>
+                </template>               
+                <lightning-input  value={recRelationShip.Originator_1__c} label="Originator 1"></lightning-input>                
+                <template if:true={BrokeragePicklistValues.data}>
+                <lightning-combobox label="Brokerage Tier"  value={value} options={BrokeragePicklistValues.data.values} onchange={handleChange}></lightning-combobox>
+                </template>
+                <template if:true={CrmPicklistValues.data}>
+                <lightning-combobox label="CRM Role"  value={value} options={CrmPicklistValues.data.values} onchange={handleChange}></lightning-combobox>
+                </template>             
+
+                <lightning-input  value={recRelationShip.TeamMate__c} label="TeamMate"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" padding="around-small" >
+                <template if:true={SpecialityPicklistValues.data}>
+                <lightning-combobox label="Speciality Group"  value={value} options={SpecialityPicklistValues.data.values} onchange={handleChange}></lightning-combobox>
+                </template>
+                
+                <lightning-input  value={recRelationShip.Originator_2__c} label="Originator 2"></lightning-input>
+                <template if:true={WealthPicklistValues.data}>
+                <lightning-combobox label="Wealth Rank"  value={value} options={WealthPicklistValues.data.values} onchange={handleChange}></lightning-combobox>
+                </template> 
+                <template if:true={IndustryPicklistValues.data}>
+                    <lightning-combobox label="Introduction Type"  value={value} options={IndustryPicklistValues.data.values} onchange={handleChange}></lightning-combobox>
+                    </template> 
+
+                            
+            </lightning-layout-item>
+            
+        </lightning-layout>
+       <lightning-button label="Cancel" title="Cancel" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+       <lightning-button variant="brand" label="Save Relationsips" title="Save Relationsips" onclick={createRec} class="slds-m-left_x-small"></lightning-button>
+
+       
+    </lightning-card>
+
+</template>

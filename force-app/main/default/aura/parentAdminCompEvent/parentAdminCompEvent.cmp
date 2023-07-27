@@ -1,0 +1,26 @@
+<aura:component >
+    <aura:attribute name="eventValue" type="List" />
+    <aura:handler name="cmpEvent" event="c:AdminCompEvent" action="{!c.handleCompEvent}" />
+    <h1>I am from Parent</h1><br/><br/>
+    <c:ChildAdminCompEvent /><br/><br/>
+    <h1>I am from Child</h1><br/><br/>
+     <div class="slds"> 
+
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate">Contact Name</span></th>
+                <th scope="col"><span class="slds-truncate">Contact Phone</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.eventValue}" var="contact">
+                <tr>
+                    <td>{!contact.Name}</td>
+                    <td>{!contact.Phone}</td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+        </div>
+</aura:component>

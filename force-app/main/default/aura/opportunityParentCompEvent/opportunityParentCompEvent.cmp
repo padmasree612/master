@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="fetchOpps" type="List" />
+    <aura:handler name="compEvent" event="c:opportunityCompEvent" action="{!c.handleParentEvent}" />
+    <c:opportunityChildCompEvent />
+    <div class="slds"> 
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate">Opportunity Name</span></th>
+                <th scope="col"><span class="slds-truncate">Opportunity StageName</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.fetchOpps}" var="opps">
+                <tr>
+                    <td>{!opps.Name}</td>
+                    <td>{!opps.StageName}</td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+        </div>
+</aura:component>
